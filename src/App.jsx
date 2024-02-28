@@ -49,18 +49,19 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className=''>
-        <section className={"flex flex-col text-center shadow-lg bg-amber-300 h-96 w-80 mx-auto my-10 rounded-lg"}>
-          <span className='text-lg'>Add TODO</span>
+      <main className='font-kode'>
+        <section className={"flex flex-col text-center shadow-lg bg-amber-300 h-auto w-80 mx-auto my-10 rounded-lg"}>
+          <span className='text-lg'>Add TO-DO</span>
           <div className='mt-10 flex flex-row gap-2 mx-auto'>
             <input className='rounded-md border-solid border-2 border-cyan-500 shadow-md p-1' type="text" ref={creat} />
             <button className='bg-orange-400 p-1 rounded-lg shadow-lg' onClick={() => creatTodo()} >Creat</button>
           </div>
           <button className='bg-orange-400 p-1 rounded-lg w-2/3 mx-auto mt-5 shadow-md mb-2' onClick={()=>done ? setdone(false) : setdone(true)}>Show {done?"not done":"done"}</button>
           <hr />
-          <span className='underline'>Your Todos</span>
+          <span className='text-lg font-bold font-sans my-2'>Your Todos</span>
+          <hr />
           {/* {console.log(todos)} */}
-          <div className='flex flex-col gap-2 mt-2 '>
+          <div className='flex flex-col gap-2 mt-2 mb-5'>
             {todos.map((todo) => {
               
               if (done == false && todo.istick == false) {
