@@ -46,7 +46,8 @@ const todo = ({ todo, status }) => {
         <li
           onClick={
             () => {
-              todo.text = prompt("Edit your todo", todo.text)
+              let x = prompt("Edit your todo", todo.text)
+              x?todo.text=x:todo.text;  
               done ? setdone(false) : setdone(true)
             }
           }
