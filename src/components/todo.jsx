@@ -10,10 +10,10 @@ const todo = ({ todo, status }) => {
   useEffect(() => {
     if (count == 0) {
       console.log('TODOS are going to save')
-      setcount = count++
+      setcount(1)
     }
     else {
-      setcount = count++
+      setcount(1)
       console.log('TODOS are going to save')
       localStorage.setItem('todos', JSON.stringify(Todos))
     }
