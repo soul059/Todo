@@ -20,7 +20,7 @@ function App() {
     count.current++
     if (x) {
       newtodo([...todos, { text: x, istick: false, id: count.current }])
-      // localStorage.setItem('todos', JSON.stringify([...todos, { text: x, istick: false, id: count.current }]))
+      localStorage.setItem('todos', JSON.stringify([...todos, { text: x, istick: false, id: count.current }]))
       Todos.push({ text: x, istick: false, id: count.current })
       localStorage.setItem('count', count.current)
       creat.current.value = ""
